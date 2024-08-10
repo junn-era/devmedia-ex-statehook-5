@@ -4,16 +4,19 @@ import styles from "./page.module.css";
 
 export default function Home() {
 
+  const corDeFundoVermelho = styles.bg_vermelho;
+  const corDeFundoAzul = styles.bg_azul;
+
   const [corAlterada, setCorAlterada] = useState(false);
-  const [corDefundo, setCorDeFundo] = useState(styles.bg_vermelho);
+  const [corDefundo, setCorDeFundo] = useState(corDeFundoVermelho);
 
   function alterarEstilo() {
     if (corAlterada === true) {
       setCorAlterada(false)
-      setCorDeFundo(styles.bg_vermelho)
+      setCorDeFundo(corDeFundoVermelho)
     } else {
       setCorAlterada(true)
-      setCorDeFundo(styles.bg_azul)
+      setCorDeFundo(corDeFundoAzul)
     }
   }
 
